@@ -1,21 +1,19 @@
 function myFunction() {
-	//var text2 = getLinesFromFront(/fronts/front1.txt);
-	var text2 = getLinesFromFront('C:/Users/surfe/GitHub/text-to-ascii-art/fronts/front1.txt');
-    var text = document.getElementById("theText").value;
-    document.getElementById("ascii-art-text").innerHTML = text2;
-}
-
-function getLinesFromFront(filepath) {
-	var str = "";
-	var lines = "";
-	var txtFile = new File(filepath);
-	txtFile.open("r");
-	while (!txtFile.eof) {
-		// read each line of text
-		str += txtFile.readln() + "\n";
+	var assicArt = "";
+	var text = document.getElementById("theText").value;
+	
+	var row = 0;
+	while (row < 7)
+	{
+		for (var i = 0; i < text.length; i++) 
+		{
+		  assicArt += front1[((text.charCodeAt(i) - 32) * 7) + row] + ".";
+		}
+		assicArt += '<br>';
+		row++;
 	}
-	//lines = str.split("\n");
-	return str;
+	document.getElementById("ascii-art-text").innerHTML = assicArt;
 }
 
-//((assicCharDec - 32) * 8) + 2
+
+//((assicCharDec - 32) * 7) 
