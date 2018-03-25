@@ -1,13 +1,13 @@
 function myFunction() {
 	var assicArt = "";
-	var text = document.getElementById("theText").value;
+	var userText = document.getElementById("theText").value;
 	
 	var row = 0;
 	while (row < 7)
 	{
-		for (var i = 0; i < text.length; i++) 
+		for (var i = 0; i < userText.length; i++) 
 		{
-		  assicArt += front1[((text.charCodeAt(i) - 32) * 7) + row] + ".";
+		  assicArt += getPieceOfArt(userText, i, row);
 		}
 		assicArt += '<br>';
 		row++;
@@ -15,5 +15,11 @@ function myFunction() {
 	document.getElementById("ascii-art-text").innerHTML = assicArt;
 }
 
+function getPieceOfArt(text, textPos, rowPos)
+{
+	var frontArrPos = ((text.charCodeAt(textPos) - 32) * 7) + rowPos;
+	var pieceOfArt = front1[frontArrPos] + ".";
 
-//((assicCharDec - 32) * 7) 
+	return pieceOfArt;
+}
+
