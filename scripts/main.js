@@ -1,4 +1,4 @@
-function myFunction() {
+function genAssicArt() {
 	var assicArt = "";
 	var userText = document.getElementById("theText").value;
 	
@@ -12,7 +12,7 @@ function myFunction() {
 		assicArt += '<br>';
 		row++;
 	}
-	document.getElementById("ascii-art-text").innerHTML = assicArt;
+	document.getElementById("ascii-art").innerHTML = assicArt;
 }
 
 function getPieceOfArt(text, textPos, rowPos)
