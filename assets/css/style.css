@@ -21,7 +21,7 @@ h1 {
 .ascii-art {
   color: #c97874;
   font-size:19px; 
-  font-style:consolas;
+  font-family:consolas, system-ui;
 }
 
 button {
@@ -64,4 +64,18 @@ button:focus::after {
   margin-left: -24px;
   opacity: 0;
   width: 48px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+     .ascii-art {
+		font-family:system-ui;
+     }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+     .ascii-art {
+		  font-family:system-ui;
+     }
 }
