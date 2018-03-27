@@ -12,7 +12,7 @@ function genAssicArt() {
 		assicArt += '<br>';
 		row++;
 	}
-	document.getElementById("ascii-art").innerHTML = assicArt;
+	document.getElementById("ascii-art-viewer").innerHTML = assicArt;
 }
 
 function getPieceOfArt(text, textPos, rowPos)
