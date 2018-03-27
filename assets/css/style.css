@@ -64,3 +64,17 @@ button:focus::after {
   opacity: 0;
   width: 48px;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+     .testimonials blockquote {
+         font-size: 19px !important;
+     }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+     .testimonials blockquote {
+         font-size: 19px !important;
+     }
+}
