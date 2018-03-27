@@ -19,6 +19,7 @@ h1 {
 }
 
 .ascii-art {
+  float: center;
   color: #c97874;
   font-size:19px; 
   font-family:consolas;
