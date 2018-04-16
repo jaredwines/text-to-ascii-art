@@ -11,23 +11,17 @@
 	<body>
 		<h1>Text to ASCII Art Generator</h1>
 		<br>
-		<input type="text" id="theText" value="Enter your text...">
+		<input type="text" id="users-input" placeholder="Enter your text..." value="">
 		<br>
 		<br>
-		<button onclick="genAssicArt()">Generatate ACSII Art</button>
+		<button id="enter" onclick="genAssicArt()">Generatate ACSII Art</button>
+		<button id="copy" onclick="copyAssicArt()">Copy ACSII Art</button>
 		<br>
-		<p class="ascii-art" id="ascii-art-viewer">#....#........#......#....................#....#...............#..........#..
-		<br>#....#..###...#......#.......###..........#....#..###....###...#..........#..
-		<br>######.#...#..#......#......#...#.........#....#.#...#..#......#.......####..
-		<br>#....#.####...#......#......#...#.........#....#.#...#..#......#......#...#..
-		<br>#....#.#......#......#......#...#.........#.##.#.#...#..#......#......#...#..
-		<br>#....#..####...##.....##.....###...........#..#...###...#.......##.....####..
-		<br>.............................................................................
-		<br>
-		</p>
+		<textarea class="ascii-art" id="ascii-art-text" style="margin: 0px; width: 1818px; height: 339px;">#....#........#......#....................#....#...............#..........#..&#13;&#10;#....#..###...#......#.......###..........#....#..###....###...#..........#..&#13;&#10;######.#...#..#......#......#...#.........#....#.#...#..#......#.......####..&#13;&#10;#....#.####...#......#......#...#.........#....#.#...#..#......#......#...#..&#13;&#10;#....#.#......#......#......#...#.........#.##.#.#...#..#......#......#...#..&#13;&#10;#....#..####...##.....##.....###...........#..#...###...#.......##.....####..&#13;&#10;.............................................................................
+		</textarea>
 		
-		<button onclick="window.open('https://www.jaredwines.com/', '_blank');">www.jaredwines.com</button>
-		<button onclick="window.open('https://github.com/jwines760/text-to-ascii-art', '_blank');">View on GitHub</button>
+		<button onclick="window.open('http://www.jaredwines.com/', '_blank');">www.jaredwines.com</button>
+		<button onclick="window.open('https://github.com/jaredwines/text-to-ascii-art', '_blank');">View on GitHub</button>
 		
 		<script src="assets/fronts/front1.js"></script>
 		<script src="assets/scripts/main.js"></script>

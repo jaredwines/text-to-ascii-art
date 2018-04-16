@@ -1,6 +1,14 @@
+var input = document.getElementById("users-input");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("enter").click();
+    }
+})
+
 function genAssicArt() {
 	var assicArt = "";
-	var userText = document.getElementById("theText").value;
+	var userText = document.getElementById("users-input").value;
 	
 	var row = 0;
 	while (row < 7)
@@ -9,10 +17,10 @@ function genAssicArt() {
 		{
 		  assicArt += getPieceOfArt(userText, i, row);
 		}
-		assicArt += '<br>';
+		assicArt += '&#13;&#10;';
 		row++;
 	}
-	document.getElementById("ascii-art-viewer").innerHTML = assicArt;
+	document.getElementById("ascii-art-text").innerHTML = assicArt;
 }
 
 function getPieceOfArt(text, textPos, rowPos)
@@ -23,3 +31,9 @@ function getPieceOfArt(text, textPos, rowPos)
 	return pieceOfArt;
 }
 
+function copyAssicArt() {
+	var range = document.getSelection().getRangeAt(0);
+    range.selectNode(document.getElementById("ascii-art-text"));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+}
