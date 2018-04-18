@@ -26,7 +26,7 @@ function genAssicArt() {
 function getPieceOfArt(text, textPos, rowPos)
 {
 	var frontArrPos = ((text.charCodeAt(textPos) - 32) * 7) + rowPos;
-	var pieceOfArt = front1[frontArrPos] + ".";
+	var pieceOfArt = font1[frontArrPos] + ".";
 
 	return pieceOfArt;
 }
